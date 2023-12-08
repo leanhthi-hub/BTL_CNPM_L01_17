@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Networking",
+      "type": ".pdf",
+      "size": 1530
+    },
+    {
+      "id": 2,
+      "name": "Data Structures and Algorithms",
+      "type": ".txt",
+      "size": 980
+    },
+    {
+      "id": 3,
+      "name": "Cybersecurity Basics",
+      "type": ".pdf",
+      "size": 1200
+    },
+    {
+      "id": 4,
+      "name": "Web Development Fundamentals",
+      "type": ".docx",
+      "size": 850
+    },
+    {
+      "id": 5,
+      "name": "Cloud Computing Essentials",
+      "type": ".pdf",
+      "size": 2000
+    },
+    {
+      "id": 6,
+      "name": "Machine Learning Concepts",
+      "type": ".txt",
+      "size": 1100
+    },
+    {
+      "id": 7,
+      "name": "Operating Systems Principles",
+      "type": ".pdf",
+      "size": 1600
+    },
+    {
+      "id": 8,
+      "name": "Database Management Systems",
+      "type": ".docx",
+      "size": 950
+    },
+    {
+      "id": 9,
+      "name": "Software Engineering Handbook",
+      "type": ".pdf",
+      "size": 1800
+    },
+    {
+      "id": 10,
+      "name": "Computer Networks Guide",
+      "type": ".txt",
+      "size": 1050
+    }
+  ]
+  
