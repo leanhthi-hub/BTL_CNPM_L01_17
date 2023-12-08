@@ -7,7 +7,10 @@ import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
-import Test from '@/components/tablelistfile/TableListFile';
+// test notify when upload file (check valid or not)
+import Test from '@/components/NotifyUpdateValid/ErrorFileNotify';
+import Test1 from '@/components/NotifyUpdateValid/ValidFile'; 
+
 import HorizontalLinearStepper from '@/components/progress_step/page'
 import CircularWithValueLabel from '@/components/progressUploadFile/page'
 /**
@@ -69,6 +72,12 @@ export default function HomePage() {
           </footer>
         </div>
       </section>
+
+{/* check component valid file or not */}
+      <Test />
+      <Test1/>
+
+
     </main>
   );
 }
