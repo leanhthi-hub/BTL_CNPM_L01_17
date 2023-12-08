@@ -10,7 +10,11 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 // test notify when upload file (check valid or not)
 import Test from '@/components/NotifyUpdateValid/ErrorFileNotify';
 import Test1 from '@/components/NotifyUpdateValid/ValidFile'; 
-
+// test upload file and preview file
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import Preview from '@/components/preview/preview'
 import HorizontalLinearStepper from '@/components/progress_step/page'
 import CircularWithValueLabel from '@/components/progressUploadFile/page'
 /**
@@ -27,8 +31,41 @@ import Logo from '~/svg/Logo.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+    // simulate upload and preview file  
+    //test upload file
+    const VisuallyHiddenInput = styled('input')({
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1,
+      });
+      const [fileUpload, setFileUpload] = React.useState<File | null>(null);
+      const handleUpload = (event: React.ChangeEvent<HTMLInputElement> ) =>{
+        const file1 = event.target.files?.[0];
+        if(file1){
+          setFileUpload(file1);
+        }
+      }
+      return (
+<>
+    <Button 
+      component="label" 
+      variant="contained"
+      startIcon={<CloudUploadIcon />}>
+          Upload file
+          <VisuallyHiddenInput  onChange={handleUpload} type="file" />
+    </Button>
+    {fileUpload && <Preview file={fileUpload}/>}
+  </>
+      );
+/*
   return (
-    <main>
+<main>
       <Head>
         <title>Hi</title>
       </Head>
@@ -55,7 +92,7 @@ export default function HomePage() {
             href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
             className='mt-4'
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+            
             <img
               width='92'
               height='32'
@@ -72,12 +109,9 @@ export default function HomePage() {
           </footer>
         </div>
       </section>
-
-{/* check component valid file or not */}
       <Test />
       <Test1/>
-
-
     </main>
   );
+*/
 }
