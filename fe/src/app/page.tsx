@@ -8,6 +8,8 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Test from '@/components/tablelistfile/TableListFile';
+import HorizontalLinearStepper from '@/components/progress_step/page'
+import CircularWithValueLabel from '@/components/progressUploadFile/page'
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -44,7 +46,8 @@ export default function HomePage() {
           <ButtonLink className='mt-6' href='/components' variant='light'>
             See all components
           </ButtonLink>
-
+        <HorizontalLinearStepper></HorizontalLinearStepper>
+        <CircularWithValueLabel></CircularWithValueLabel>
           <UnstyledLink
             href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
             className='mt-4'
