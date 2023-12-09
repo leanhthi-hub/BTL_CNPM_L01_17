@@ -1,18 +1,18 @@
 export const navLinks: NavLinks[] = [
   {
-    id: 'home',
+    id: '',
     title: 'Trang chủ',
   },
   {
-    id: 'tokenization',
-    title: 'Sản phẩm',
+    id: 'print_doc',
+    title: 'In tài liệu',
   },
   {
-    id: 'home',
-    title: 'Trường hợp sử dụng',
+    id: 'printer',
+    title: 'Máy in',
   },
   {
-    id: 'lease',
-    title: 'Về chúng tôi',
+    id: 'history',
+    title: 'Lịch sử in ấn',
   },
 ];
