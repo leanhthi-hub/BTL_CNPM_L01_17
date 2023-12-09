@@ -3,9 +3,9 @@
 # dependencies
 /be/node_modules/
 /be/dist/
-/fe/node_modules/
-/fe/.next/
-/fe/.vscode/
+/node_modules
+/.next
+/.vscode
 /.pnp
 .pnp.js
 .yarn/install-state.gz
