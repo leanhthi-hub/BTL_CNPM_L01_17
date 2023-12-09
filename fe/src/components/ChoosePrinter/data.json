@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Brother MFC L2750DW XL",
+        "image": "./images/printer/Brother_MFC_L2750DW_XL.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Canon Pixm TR8620",
+        "image": "./images/printer/Canon_Pixma_TR8620.jpg"
+    }
+]
