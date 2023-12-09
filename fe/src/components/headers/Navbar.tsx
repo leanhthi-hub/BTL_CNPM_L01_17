@@ -24,7 +24,12 @@ const Navbar = ({ title }: any) => {
             } ${index === navLinks.length - 1 ? 'mr-0' : 'mg:mr-10 md:mr-4'}`}
             onClick={() => setActive(nav.id)}
           >
-            <Link href={nav.id}>{nav.title}</Link>
+            {' '}
+            {nav.title == 'Máy in' || nav.title == 'Lịch sử in ấn' ? (
+              <div>{nav.title}</div>
+            ) : (
+              <Link href={nav.id}>{nav.title}</Link>
+            )}
           </li>
         ))}
       </ul>

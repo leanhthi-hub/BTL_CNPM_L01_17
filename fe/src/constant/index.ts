@@ -1,6 +1,6 @@
 export const navLinks: NavLinks[] = [
   {
-    id: '',
+    id: '/',
     title: 'Trang chủ',
   },
   {
@@ -8,11 +8,11 @@ export const navLinks: NavLinks[] = [
     title: 'In tài liệu',
   },
   {
-    id: '/printer',
+    id: '/',
     title: 'Máy in',
   },
   {
-    id: '/history',
+    id: '/',
     title: 'Lịch sử in ấn',
   },
 ];
