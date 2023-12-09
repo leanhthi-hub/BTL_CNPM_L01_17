@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
 import { down_arrow, logo, profile, vietnam } from '@/assets';
 
 import Navbar from './Navbar';
-import NextImage from '../NextImage';
 import styles from '../../style';
 
 const Header = ({ title }: any) => {
@@ -11,14 +12,14 @@ const Header = ({ title }: any) => {
         <div
           className={`${styles.boxWidth} flex flex-row items-center justify-between py-4`}
         >
-          <NextImage src={logo} className='w-32' />
+          <Image src={logo} className='w-32' alt='' />
           <Navbar title={title} />
-          <div className='flex flex-row items-center'>
+          <div className='flex flex-row items-center gap-4'>
             <div className='flex flex-row items-center gap-2'>
-              <NextImage src={profile} className='w-14' />
-              <NextImage src={down_arrow} className='w-14' />
+              <Image src={profile} className='w-12' alt='' />
+              <Image src={down_arrow} className='w-5' alt='' />
             </div>
-            <NextImage src={vietnam} className='w-14' />
+            <Image src={vietnam} className='w-10' alt='' />
           </div>
         </div>
       </div>

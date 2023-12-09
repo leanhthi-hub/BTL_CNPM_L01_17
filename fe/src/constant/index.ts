@@ -4,15 +4,15 @@ export const navLinks: NavLinks[] = [
     title: 'Trang chủ',
   },
   {
-    id: 'print_doc',
+    id: '/print_doc',
     title: 'In tài liệu',
   },
   {
-    id: 'printer',
+    id: '/printer',
     title: 'Máy in',
   },
   {
-    id: 'history',
+    id: '/history',
     title: 'Lịch sử in ấn',
   },
 ];

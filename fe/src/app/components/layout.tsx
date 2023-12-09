@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/colors.css';
+
+import Footer from '@/components/footer/Footer';
 import Header from '@/components/headers/Header';
 
 export default function ComponentsLayout({
@@ -9,5 +11,11 @@ export default function ComponentsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 }
