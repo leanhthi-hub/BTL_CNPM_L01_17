@@ -27,18 +27,18 @@ interface PreviewProps {
                     >{file.name}</Typography>
                     <DocViewer
                         documents={doc}
-                        config={{
-                            header: {
-                                disableHeader: true,
-                                disableFileName: true,
-                                retainURLParams: false,
-                            },
-                            pdfZoom: {
-                                defaultZoom: 2.0,
-                                zoomJump: 0.3,
-                            }
-                        }
-                        }
+                        // config={{
+                        //     header: {
+                        //         disableHeader: true,
+                        //         disableFileName: true,
+                        //         retainURLParams: false,
+                        //     },
+                        //     pdfZoom: {
+                        //         defaultZoom: 2.0,
+                        //         zoomJump: 0.3,
+                        //     }
+                        // }
+                        // }
 
                         pluginRenderers={DocViewerRenderers} />
                 </Container>

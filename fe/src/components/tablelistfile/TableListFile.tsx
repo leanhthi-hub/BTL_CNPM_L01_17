@@ -3,9 +3,9 @@ import data from './example.json';
 
 type Props = {}
 
-export default function Toan() {
+export default function TableFile({file}) {
     return (
-        <div className='bg-[#F4F7FD] p-3'>
+        <div className='bg-[#F4F7FD] p-3 w-full'>
             <table className='ms-3'>
                 <thead className='table'>
                     <tr>
@@ -16,7 +16,7 @@ export default function Toan() {
                     </tr>
                 </thead>
                 <tbody className='table bg-white rounded-lg' >
-                    {data.map((ele, index) => (
+                    {file && file.map((ele, index) => (
                         <tr key={index}>
                             <td className='w-[3rem] px-4 py-2 font-bold'>{ele.id}</td>
                             <td className='w-[20rem] px-3 py-2'>{ele.name}</td>
