@@ -1,28 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import { navLinks } from '../../constant/index';
-import Link from 'next/link';
+'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+
+import NextImage from '../NextImage';
+import { close, icon_1, menu, vietnam } from '../../assets/index';
+import { navLinks } from '../../constant/index';
 // import { ai_logo, close, menu, tensor_logo } from '../../assets/index';
 
 const Navbar = ({ title }: any) => {
-  const router = useRouter();
-
-  const [active, setActive] = useState<string>('Home');
+  const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <header className='box-shadow flex w-full items-center justify-between border-b-[2px] bg-white'>
-      <Link href='/'>
-        {/* <Image src={new-tab} alt='' className='w-24 flex-none' /> */}
-      </Link>
+    <header className=''>
       <ul className='hidden list-none justify-center md:flex md:flex-1'>
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
             className={`mg:text-[16px] ml-3 cursor-pointer font-medium tracking-[0.1px] md:text-[14px] lg:text-[18px] ${
-              active === nav.id ? 'text-primary' : 'text-secondary'
+              active === nav.id ? 'text-blue-600' : 'text-gray-900'
             } ${index === navLinks.length - 1 ? 'mr-0' : 'mg:mr-10 md:mr-4'}`}
             onClick={() => setActive(nav.id)}
           >
@@ -30,7 +28,6 @@ const Navbar = ({ title }: any) => {
           </li>
         ))}
       </ul>
-
       <div className='flex items-center justify-end pr-4 md:hidden'>
         <Image
           src={toggle ? close : menu}

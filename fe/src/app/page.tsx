@@ -9,14 +9,14 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 // test notify when upload file (check valid or not)
 import Test from '@/components/NotifyUpdateValid/ErrorFileNotify';
-import Test1 from '@/components/NotifyUpdateValid/ValidFile'; 
+import Test1 from '@/components/NotifyUpdateValid/ValidFile';
 // test upload file and preview file
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import Preview from '@/components/preview/preview'
-import HorizontalLinearStepper from '@/components/progress_step/page'
-import CircularWithValueLabel from '@/components/progressUploadFile/page'
+import Preview from '@/components/preview/preview';
+import HorizontalLinearStepper from '@/components/progress_step/page';
+import CircularWithValueLabel from '@/components/progressUploadFile/page';
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -25,45 +25,54 @@ import CircularWithValueLabel from '@/components/progressUploadFile/page'
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 import Logo from '~/svg/Logo.svg';
+import ComponentsLayout from './components/layout';
+import { logo } from '@/assets';
+import Image from 'next/image';
+import NextImage from '@/components/NextImage';
+import Header from '@/components/headers/Header';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
 export default function HomePage() {
-    // simulate upload and preview file  
-    //test upload file
-    const VisuallyHiddenInput = styled('input')({
-        clip: 'rect(0 0 0 0)',
-        clipPath: 'inset(50%)',
-        height: 1,
-        overflow: 'hidden',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        whiteSpace: 'nowrap',
-        width: 1,
-      });
-      const [fileUpload, setFileUpload] = React.useState<File | null>(null);
-      const handleUpload = (event: React.ChangeEvent<HTMLInputElement> ) =>{
-        const file1 = event.target.files?.[0];
-        if(file1){
-          setFileUpload(file1);
-        }
-      }
-      return (
-<>
-    <Button 
-      component="label" 
-      variant="contained"
-      startIcon={<CloudUploadIcon />}>
+  // simulate upload and preview file
+  //test upload file
+  const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+  });
+  const [fileUpload, setFileUpload] = React.useState<File | null>(null);
+  const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file1 = event.target.files?.[0];
+    if (file1) {
+      setFileUpload(file1);
+    }
+  };
+  return (
+    <>
+      <Header />
+      <ComponentsLayout>
+        <Button
+          component='label'
+          variant='contained'
+          startIcon={<CloudUploadIcon />}
+        >
           Upload file
-          <VisuallyHiddenInput  onChange={handleUpload} type="file" />
-    </Button>
-    {fileUpload && <Preview file={fileUpload}/>}
-  </>
-      );
-/*
+          <VisuallyHiddenInput onChange={handleUpload} type='file' />
+        </Button>
+        {fileUpload && <Preview file={fileUpload} />}
+      </ComponentsLayout>
+    </>
+  );
+  /*
   return (
 <main>
       <Head>
